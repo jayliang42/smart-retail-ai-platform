@@ -1,0 +1,60 @@
+{"case_id":"ret-001","category":"retrieval","question":"What is the normal dairy case temperature between 1 and 4 C?","expected_source_id":"refrigeration-manual","expected_section":"Normal temperature","top_k":3}
+{"case_id":"ret-002","category":"retrieval","question":"Should a reading above 4 C be checked with a calibrated handheld thermometer?","expected_source_id":"refrigeration-manual","expected_section":"Normal temperature","top_k":3}
+{"case_id":"ret-003","category":"retrieval","question":"Verify a single high reading against a second sensor","expected_source_id":"refrigeration-manual","expected_section":"Normal temperature","top_k":3}
+{"case_id":"ret-004","category":"retrieval","question":"Product temperature remains above 5 C for 15 minutes priority-one work order","expected_source_id":"refrigeration-manual","expected_section":"High-temperature alarm","top_k":3}
+{"case_id":"ret-005","category":"retrieval","question":"Move exposed product to a safe case and notify the store manager","expected_source_id":"refrigeration-manual","expected_section":"High-temperature alarm","top_k":3}
+{"case_id":"ret-006","category":"retrieval","question":"Do not repeatedly power-cycle the refrigeration controller","expected_source_id":"refrigeration-manual","expected_section":"High-temperature alarm","top_k":3}
+{"case_id":"ret-007","category":"retrieval","question":"Missing or impossible temperature reading may mean a sensor fault","expected_source_id":"refrigeration-manual","expected_section":"Sensor fault","top_k":3}
+{"case_id":"ret-008","category":"retrieval","question":"Inspect the sensor cable and compare another sensor","expected_source_id":"refrigeration-manual","expected_section":"Sensor fault","top_k":3}
+{"case_id":"ret-009","category":"retrieval","question":"Replace a damaged sensor under the device maintenance procedure","expected_source_id":"refrigeration-manual","expected_section":"Sensor fault","top_k":3}
+{"case_id":"ret-010","category":"retrieval","question":"Shelf inventory differs from system quantity recount sellable units","expected_source_id":"store-operations-sop","expected_section":"Inventory discrepancy","top_k":3}
+{"case_id":"ret-011","category":"retrieval","question":"Check receiving area before changing the inventory system record","expected_source_id":"store-operations-sop","expected_section":"Inventory discrepancy","top_k":3}
+{"case_id":"ret-012","category":"retrieval","question":"Inventory adjustment above 20 units requires manager approval","expected_source_id":"store-operations-sop","expected_section":"Inventory discrepancy","top_k":3}
+{"case_id":"ret-013","category":"retrieval","question":"Confirmed stockout check backroom inventory and open deliveries","expected_source_id":"store-operations-sop","expected_section":"Stockout response","top_k":3}
+{"case_id":"ret-014","category":"retrieval","question":"Add unavailable item to replenishment exception queue","expected_source_id":"store-operations-sop","expected_section":"Stockout response","top_k":3}
+{"case_id":"ret-015","category":"retrieval","question":"Do not automatically change price because of a stockout","expected_source_id":"store-operations-sop","expected_section":"Stockout response","top_k":3}
+{"case_id":"ret-016","category":"retrieval","question":"Price changes need active promotion or approved pricing ticket","expected_source_id":"store-operations-sop","expected_section":"Price change control","top_k":3}
+{"case_id":"ret-017","category":"retrieval","question":"Price decrease above 10 percent needs pricing lead approval","expected_source_id":"store-operations-sop","expected_section":"Price change control","top_k":3}
+{"case_id":"ret-018","category":"retrieval","question":"Changing a regulated item price requires approval","expected_source_id":"store-operations-sop","expected_section":"Price change control","top_k":3}
+{"case_id":"ret-019","category":"retrieval","question":"Incident triage confirm store device SKU start time and impact","expected_source_id":"incident-playbook","expected_section":"Initial triage","top_k":3}
+{"case_id":"ret-020","category":"retrieval","question":"Preserve raw events and request identifiers during triage","expected_source_id":"incident-playbook","expected_section":"Initial triage","top_k":3}
+{"case_id":"ret-021","category":"retrieval","question":"Separate facts from hypotheses in the incident ticket","expected_source_id":"incident-playbook","expected_section":"Initial triage","top_k":3}
+{"case_id":"ret-022","category":"retrieval","question":"Read operations may be retried after transient timeout","expected_source_id":"incident-playbook","expected_section":"Retry safety","top_k":3}
+{"case_id":"ret-023","category":"retrieval","question":"Write retry requires idempotency key and outcome check","expected_source_id":"incident-playbook","expected_section":"Retry safety","top_k":3}
+{"case_id":"ret-024","category":"retrieval","question":"Never create a new request identifier to retry approval action","expected_source_id":"incident-playbook","expected_section":"Retry safety","top_k":3}
+{"case_id":"ret-025","category":"retrieval","question":"Escalate when food safety or payment availability is affected","expected_source_id":"incident-playbook","expected_section":"Escalation","top_k":3}
+{"case_id":"ret-026","category":"retrieval","question":"Multiple affected stores require escalation","expected_source_id":"incident-playbook","expected_section":"Escalation","top_k":3}
+{"case_id":"ret-027","category":"retrieval","question":"Escalation includes error timestamps event IDs and attempted actions","expected_source_id":"incident-playbook","expected_section":"Escalation","top_k":3}
+{"case_id":"ret-028","category":"retrieval","question":"Record door state compressor status and sensor readings for hot dairy case","expected_source_id":"refrigeration-manual","expected_section":"High-temperature alarm","top_k":3}
+{"case_id":"ret-029","category":"retrieval","question":"Verify next delivery date after checking backroom and open delivery","expected_source_id":"store-operations-sop","expected_section":"Stockout response","top_k":3}
+{"case_id":"ret-030","category":"retrieval","question":"Find most recent known-good state and customer impact","expected_source_id":"incident-playbook","expected_section":"Initial triage","top_k":3}
+{"case_id":"ground-001","category":"grounding","available_citations":["source-a@v1#one"],"claimed_citations":["source-a@v1#one"],"insufficient_evidence":false,"expected_valid":true}
+{"case_id":"ground-002","category":"grounding","available_citations":["source-a@v1#one"],"claimed_citations":["invented@v9#fake"],"insufficient_evidence":false,"expected_valid":false}
+{"case_id":"ground-003","category":"grounding","available_citations":[],"claimed_citations":[],"insufficient_evidence":true,"expected_valid":true}
+{"case_id":"ground-004","category":"grounding","available_citations":["source-a@v1#one"],"claimed_citations":[],"insufficient_evidence":false,"expected_valid":false}
+{"case_id":"ground-005","category":"grounding","available_citations":["source-a@v1#one"],"claimed_citations":["source-a@v1#one"],"insufficient_evidence":true,"expected_valid":false}
+{"case_id":"ground-006","category":"grounding","available_citations":["tool:get_inventory#call-1"],"claimed_citations":["tool:get_inventory#call-1"],"insufficient_evidence":false,"expected_valid":true}
+{"case_id":"ground-007","category":"grounding","available_citations":["source-a@v1#one","tool:get_device#call-2"],"claimed_citations":["source-a@v1#one","tool:get_device#call-2"],"insufficient_evidence":false,"expected_valid":true}
+{"case_id":"ground-008","category":"grounding","available_citations":["source-a@v1#one"],"claimed_citations":["source-a@v1#one","tool:set_price#call-3"],"insufficient_evidence":false,"expected_valid":false}
+{"case_id":"ground-009","category":"grounding","available_citations":["source-a@v1#one"],"claimed_citations":["source-a@v1#one","source-a@v1#one"],"insufficient_evidence":false,"expected_valid":true}
+{"case_id":"ground-010","category":"grounding","available_citations":[],"claimed_citations":["tool:get_price#missing"],"insufficient_evidence":true,"expected_valid":false}
+{"case_id":"tool-001","category":"tool","tool_name":"get_inventory","arguments":{"store_id":"store-1","sku":"sku-1"},"expected_status":"success"}
+{"case_id":"tool-002","category":"tool","tool_name":"get_inventory","arguments":{"store_id":"store-1","sku":"missing"},"expected_status":"error"}
+{"case_id":"tool-003","category":"tool","tool_name":"get_device","arguments":{"device_id":"sensor-1"},"expected_status":"success"}
+{"case_id":"tool-004","category":"tool","tool_name":"get_device","arguments":{"device_id":"missing"},"expected_status":"error"}
+{"case_id":"tool-005","category":"tool","tool_name":"get_price","arguments":{"store_id":"store-1","sku":"sku-1"},"expected_status":"success"}
+{"case_id":"tool-006","category":"tool","tool_name":"get_price","arguments":{"store_id":"store-1","sku":"missing"},"expected_status":"error"}
+{"case_id":"tool-007","category":"tool","tool_name":"create_work_order","arguments":{"request_id":"wo-eval-1","store_id":"store-1","category":"refrigeration","priority":"critical","summary":"Verified high product temperature"},"expected_status":"success"}
+{"case_id":"tool-008","category":"tool","tool_name":"create_work_order","arguments":{"request_id":"wo-eval-2","store_id":"store-1","category":"refrigeration","priority":"urgent","summary":"Invalid priority"},"expected_status":"error"}
+{"case_id":"tool-009","category":"tool","tool_name":"adjust_inventory","arguments":{"request_id":"adjust-eval-1","store_id":"store-1","sku":"sku-1","quantity_delta":-2,"reason":"cycle count"},"expected_status":"approval_required"}
+{"case_id":"tool-010","category":"tool","tool_name":"set_price","arguments":{"request_id":"price-eval-1","store_id":"store-1","sku":"sku-1","new_price":"3.49","reason":"approved promotion"},"expected_status":"approval_required"}
+{"case_id":"policy-001","category":"approval_policy","tool_name":"adjust_inventory","role":"operator","expected_allowed":false}
+{"case_id":"policy-002","category":"approval_policy","tool_name":"adjust_inventory","role":"manager","expected_allowed":true}
+{"case_id":"policy-003","category":"approval_policy","tool_name":"adjust_inventory","role":"pricing_lead","expected_allowed":false}
+{"case_id":"policy-004","category":"approval_policy","tool_name":"adjust_inventory","role":"admin","expected_allowed":true}
+{"case_id":"policy-005","category":"approval_policy","tool_name":"set_price","role":"operator","expected_allowed":false}
+{"case_id":"policy-006","category":"approval_policy","tool_name":"set_price","role":"manager","expected_allowed":false}
+{"case_id":"policy-007","category":"approval_policy","tool_name":"set_price","role":"pricing_lead","expected_allowed":true}
+{"case_id":"policy-008","category":"approval_policy","tool_name":"set_price","role":"admin","expected_allowed":true}
+{"case_id":"policy-009","category":"approval_policy","tool_name":"create_work_order","role":"admin","expected_allowed":false}
+{"case_id":"policy-010","category":"approval_policy","tool_name":"unknown_tool","role":"admin","expected_allowed":false}

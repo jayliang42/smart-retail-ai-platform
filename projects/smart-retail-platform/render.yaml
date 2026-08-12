@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: smart-retail-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    dockerCommand: uvicorn smart_retail.api.app:app --host 0.0.0.0 --port $PORT
+    preDeployCommand: sh scripts/predeploy.sh
+    healthCheckPath: /health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: smart-retail-postgres
+          property: connectionString
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.6-luna
+      - key: SMART_RETAIL_API_KEYS
+        sync: false
+
+databases:
+  - name: smart-retail-postgres
+    plan: free
+    postgresMajorVersion: "16"
+    databaseName: smart_retail
+    user: smart_retail
+    ipAllowList: []

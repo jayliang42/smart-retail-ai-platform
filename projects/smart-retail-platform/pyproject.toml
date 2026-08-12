@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-retail-platform"
+version = "0.0.1"
+description = "AI-powered smart retail operations learning platform"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "alembic>=1.14,<2.0",
+    "fastapi>=0.115,<1.0",
+    "openai>=2.0,<3.0",
+    "pandas>=2.2,<4.0",
+    "pgvector>=0.3,<1.0",
+    "psycopg[binary]>=3.2,<4.0",
+    "scikit-learn>=1.6,<2.0",
+    "sqlalchemy>=2.0,<3.0",
+    "uvicorn[standard]>=0.34,<1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "basedpyright>=1.27",
+    "httpx>=0.28",
+    "pandas-stubs>=2.2",
+    "pytest>=8.3",
+    "ruff>=0.9",
+]
+
+[project.scripts]
+smart-retail-evaluate = "smart_retail.analytics.cli:main"
+smart-retail-evaluate-anomalies = "smart_retail.analytics.cli:main"
+smart-retail-run-analytics = "smart_retail.analytics.batch:main"
+smart-retail-ingest-knowledge = "smart_retail.knowledge.ingestion:main"
+smart-retail-evaluate-copilot = "smart_retail.copilot.evaluation:main"
+smart-retail-evaluate-live-agent = "smart_retail.copilot.live_evaluation:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.basedpyright]
+include = ["src", "tests"]
+pythonVersion = "3.13"
+typeCheckingMode = "standard"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

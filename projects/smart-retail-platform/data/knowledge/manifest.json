@@ -1,0 +1,23 @@
+[
+  {
+    "path": "store-operations-sop-v1.md",
+    "source_id": "store-operations-sop",
+    "title": "Store Operations SOP",
+    "source_version": "v1",
+    "source_uri": "internal://sop/store-operations/v1"
+  },
+  {
+    "path": "refrigeration-manual-v1.md",
+    "source_id": "refrigeration-manual",
+    "title": "Refrigeration Unit Manual",
+    "source_version": "v1",
+    "source_uri": "internal://manuals/refrigeration/v1"
+  },
+  {
+    "path": "incident-playbook-v1.md",
+    "source_id": "incident-playbook",
+    "title": "Retail Incident Playbook",
+    "source_version": "v1",
+    "source_uri": "internal://playbooks/incidents/v1"
+  }
+]
